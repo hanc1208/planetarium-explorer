@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "planetarium-explorer",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.tsx",
@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "hanc1208@gmail.com",
-  "license": "ISC",
+  "license": "AGPL-3.0+",
   "devDependencies": {
     "@types/classnames": "^2.2.3",
     "@types/node": "^9.6.1",
