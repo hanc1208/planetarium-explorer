@@ -1,10 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Route, Router } from 'react-router';
+import { Route, Router, Switch } from 'react-router';
 import { Store } from 'redux';
 
 import createBrowserHistory from 'history/createBrowserHistory';
 
+import Block from 'components/Block';
+import BlockList from 'components/BlockList';
 import { RootState } from 'store/reducer';
 
 import './styles.scss';
@@ -22,7 +24,11 @@ export default class App extends React.Component<Props> {
         return (
             <Provider store={store}>
                 <Router history={history}>
-                    <Route path="/" component={() => <div>Hello world!</div>} />
+                    <Switch>
+                        <Route path="/blocks/:blockHash/" component={Block} />
+                        <Route path="/blocks/" component={BlockList} />
+                        <Route path="/" component={() => <div>Hello world!</div>} />
+                    </Switch>
                 </Router>
             </Provider>
         );
